@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "訂單查詢";
+}
+
+<h2>訂單查詢</h2>
+<table>
+    <tr>
+        <td>訂單編號</td>
+        <td><input type="text" id="OrderId" /></td>
+    </tr>
+    <tr>
+        <td>客戶名稱</td>
+        <td><input type="text" id="CompanyName" /></td>
+    </tr>
+    <tr>
+        <td>負責員工</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>出貨公司</td><td></td>
+    </tr>
+    <tr>
+        <td>訂購日期</td>
+        <td><input type="date" id="OrderDate" /></td>
+        <td>出貨日期</td>
+        <td><input type="date" id="ShippedDate" /></td>
+    </tr>
+    <tr>
+        <td>需要日期</td>
+        <td><input type="date" id="RequiredDate" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button id="searchText">查詢</button></td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+
+    $("#searchText").click(function (e) {
+        e.preventDefault();
+
+        alert('aaa');
+    });
+    
+</script>
+
+
