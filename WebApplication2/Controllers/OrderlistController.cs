@@ -25,8 +25,13 @@ namespace WebApplication2.Controllers
                 ShippedDate = "",
                 RequiredDate = ""
             });
+            
+            for (int a=0; a<5;a++)
+            {
+                ViewBag.orderlist = orderlist[a].OrderId;
+            };
+            
 
-            ViewBag.orderlist = orderlist;
 
 
             return View();

@@ -5,5 +5,14 @@
 
 <h2>查詢結果</h2>
 
-@ViewBag.orderlist
-    
+<table>
+    @foreach (var item in ViewBag.orderlist)
+    {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+    }
+
+</table>   
