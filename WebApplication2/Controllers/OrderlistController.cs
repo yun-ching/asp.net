@@ -29,8 +29,7 @@ namespace WebApplication2.Controllers
 
             ViewBag.orderlist = orderlist[0].OrderId;
 
-
-
+           
             return View();
         }
     }
