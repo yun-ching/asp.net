@@ -13,10 +13,11 @@ namespace WebApplication2.Controllers
         {
             return View();
         }
-
+        
         public ActionResult OrderlistSearch()
         {
             Models.OrderlistService orderlistService = new Models.OrderlistService();
+            
             var orderlist = orderlistService.GetOrderlistByCondtioin(new Models.OrderlistSearchArg()
             {
                 OrderId = "",
@@ -25,12 +26,8 @@ namespace WebApplication2.Controllers
                 ShippedDate = "",
                 RequiredDate = ""
             });
-            
-            for (int a=0; a<5;a++)
-            {
-                ViewBag.orderlist = orderlist[a].OrderId;
-            };
-            
+
+            ViewBag.orderlist = orderlist[0].OrderId;
 
 
 
