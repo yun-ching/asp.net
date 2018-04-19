@@ -15,7 +15,7 @@
             @item.OrderId
         </td>
         <td>
-            @item.CompanyName
+            @item.ContactName
         </td>
         <td>
             @item.OrderDate
@@ -24,7 +24,7 @@
     }
 </table>
 <div>
-    <button onclick="history.back()" >回查詢頁</button>
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
   

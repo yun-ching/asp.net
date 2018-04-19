@@ -21,7 +21,7 @@ namespace WebApplication2.Controllers
             var orderlist = orderlistService.GetOrderlistByCondtioin(new Models.OrderlistSearchArg()
             {
                 OrderId = "",
-                CompanyName = "",
+                ContactName = "",
                 OrderDate = "",
                 ShippedDate = "",
                 RequiredDate = ""

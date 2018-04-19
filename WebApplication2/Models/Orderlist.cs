@@ -12,7 +12,7 @@ namespace WebApplication2.Models
     {
         public string OrderId { get; set; }
 
-        public string CompanyName { get; set; }
+        public string ContactName { get; set; }
 
         public string OrderDate { get; set; }
 

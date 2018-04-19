@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <td>客戶名稱</td>
-        <td><input type="text" id="CompanyName" /></td>
+        <td><input type="text" id="ContactName" /></td>
     </tr>
     <tr>
         <td>負責員工</td>
@@ -32,8 +32,8 @@
     </tr>
     <tr>
         <td></td>
-        <td><button onclick="location.href='OrderlistSearch'" id="searchText">查詢</button></td>
-        <td><button onclick="location.href='OrderlistInsert'" id="insertText">新增</button></td>
+        <td>@Html.ActionLink("查詢", "OrderlistSearch")</td>
+        <td>@Html.ActionLink("新增", "OrderlistInsert")</td>
     </tr>
 </table>
 
