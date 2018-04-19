@@ -27,9 +27,14 @@ namespace WebApplication2.Controllers
                 RequiredDate = ""
             });
 
-            ViewBag.orderlist = orderlist[0].OrderId;
+            ViewBag.orderlist = orderlist;
 
            
+            return View();
+        }
+        public ActionResult OrderlistInsert()
+        {
+            
             return View();
         }
     }

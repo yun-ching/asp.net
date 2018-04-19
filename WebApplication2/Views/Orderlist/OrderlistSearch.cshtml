@@ -4,9 +4,25 @@
 }
 
 <h2>查詢結果</h2>
-
-    @ViewBag.orderlist
-
+<table>
+    <tr>
+        <td>訂單編號</td><td>公司名稱</td><td>訂購日期</td>
+    </tr>
+    @foreach (var item in ViewBag.orderlist)
+    {
+    <tr>
+        <td>
+            @item.OrderId
+        </td>
+        <td>
+            @item.CompanyName
+        </td>
+        <td>
+            @item.OrderDate
+        </td>
+    </tr>
+    }
+</table>
 <div>
     <button onclick="history.back()" >回查詢頁</button>
 </div>
