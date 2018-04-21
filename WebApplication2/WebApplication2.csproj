@@ -110,7 +110,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Orderlist.cs" />
-    <Compile Include="Models\OrderlistInsert.cs" />
     <Compile Include="Models\OrderlistSearchArg.cs" />
     <Compile Include="Models\OrderlistService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,7 +125,6 @@
     <Content Include="Views\Orderlist\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Orderlist\OrderlistSearch.cshtml" />
-    <Content Include="Views\Orderlist\OrderlistInsert.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
