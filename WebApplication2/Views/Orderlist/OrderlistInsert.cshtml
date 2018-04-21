@@ -6,7 +6,7 @@
 
 <h2>OrderlistInsert</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("insertcheck", "OrderlistController", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     

@@ -20,7 +20,7 @@ namespace WebApplication2.Controllers
             
             var orderlist = orderlistService.GetOrderlistByCondtioin(new Models.OrderlistSearchArg()
             {
-                
+
             });
 
             ViewBag.orderlist = orderlist;
@@ -29,17 +29,32 @@ namespace WebApplication2.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult OrderlistInsert()
+        public ActionResult insertcheck(string OrderId, string ContactName, DateTime OrderDate, DateTime ShippedDate, DateTime RequiredDate, string CompanyName, string FirstName, string LastName, string ShipCountry, string ShipCity, string ShipRegion, string ShipPostalCode, string ShipAddress)
         {
-            Models.Orderlist orderlist = new Models.Orderlist();
 
-            return View(orderlist);
+              
+            return View();
         }
+
         [HttpPost]
-        public ActionResult OrderlistInsert(Models.Orderlist orderlist)
+        public ActionResult insertcheck(FormCollection post)
         {
+            string  OrderId= post["OrderId"];
+            string ContactName = post["ContactName"];
+            DateTime OrderDate = Convert.ToDateTime(post["OrderDate"]);
+            DateTime ShippedDate = Convert.ToDateTime(post["ShippedDate"]);
+            DateTime RequiredDate = Convert.ToDateTime(post["RequiredDate"]);
+            string CompanyName = post["CompanyName"];
+            string FirstName = post["FirstName"];
+            string LastName = post["LastName"];
+            string ShipCountry = post["ShipCountry"];
+            string ShipCity = post["ShipCity"];
+            string ShipRegion = post["ShipRegion"];
+            string ShipPostalCode = post["ShipPostalCode"];
+            string ShipAddress = post["ShipAddress"];
+
             
+
             return View();
         }
 

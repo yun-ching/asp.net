@@ -23,6 +23,8 @@ namespace WebApplication2.Models
             return result;
         }
 
+        
+
         internal object GetOrderlistByCondtioin()
         {
             throw new NotImplementedException();
