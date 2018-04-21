@@ -14,11 +14,11 @@ namespace WebApplication2.Models
         public List<Models.Orderlist> GetOrderlistByCondtioin(Models.OrderlistSearchArg arg)
         {
             List<Models.Orderlist> result = new List<Orderlist>();
-            result.Add(new Orderlist() { OrderId = "1", ContactName = "Customer IBVRG", OrderDate = "2006-07-08" });
-            result.Add(new Orderlist() { OrderId = "2", ContactName = "Customer IBVRG", OrderDate = "2006-07-08" });
-            result.Add(new Orderlist() { OrderId = "3", ContactName = "Customer IBVRG", OrderDate = "2006-07-08" });
-            result.Add(new Orderlist() { OrderId = "4", ContactName = "Customer NRCSK", OrderDate = "2006-07-08" });
-            result.Add(new Orderlist() { OrderId = "5", ContactName = "Customer NRCSK", OrderDate = "2006-07-08" });
+            result.Add(new Orderlist() { OrderId = 1, ContactName = "Customer IBVRG", OrderDate = Convert.ToDateTime("2006-07-08") });
+            result.Add(new Orderlist() { OrderId = 2, ContactName = "Customer IBVRG", OrderDate = Convert.ToDateTime("2006-07-08") });
+            result.Add(new Orderlist() { OrderId = 3, ContactName = "Customer IBVRG", OrderDate = Convert.ToDateTime("2006-07-08") });
+            result.Add(new Orderlist() { OrderId = 4, ContactName = "Customer NRCSK", OrderDate = Convert.ToDateTime("2006-07-08") });
+            result.Add(new Orderlist() { OrderId = 5, ContactName = "Customer NRCSK", OrderDate = Convert.ToDateTime("2006-07-08") });
 
             return result;
         }

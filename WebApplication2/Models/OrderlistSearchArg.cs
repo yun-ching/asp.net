@@ -7,7 +7,7 @@ namespace WebApplication2.Models
 {
     public class OrderlistSearchArg
     {
-        public string OrderId { get; set; }
+        public int OrderId { get; set; }
 
         public string ContactName { get; set; }
 

@@ -11,15 +11,15 @@ namespace WebApplication2.Models
     public class Orderlist
     {
         
-        public string OrderId { get; set; } //訂購編號
+        public int OrderId { get; set; } //訂購編號
 
         public string ContactName { get; set; } //客戶名稱
 
-        public string OrderDate { get; set; } //訂購日期
+        public DateTime OrderDate { get; set; } //訂購日期
 
-        public string ShippedDate { get; set; } //出貨日期
+        public DateTime ShippedDate { get; set; } //出貨日期
 
-        public string RequiredDate { get; set; } //需要日期
+        public DateTime RequiredDate { get; set; } //需要日期
 
         public string CompanyName { get; set; } //出貨公司名稱
 

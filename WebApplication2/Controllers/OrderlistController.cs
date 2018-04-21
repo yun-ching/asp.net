@@ -20,11 +20,7 @@ namespace WebApplication2.Controllers
             
             var orderlist = orderlistService.GetOrderlistByCondtioin(new Models.OrderlistSearchArg()
             {
-                OrderId = "",
-                ContactName = "",
-                OrderDate = "",
-                ShippedDate = "",
-                RequiredDate = ""
+                
             });
 
             ViewBag.orderlist = orderlist;
@@ -32,11 +28,20 @@ namespace WebApplication2.Controllers
            
             return View();
         }
+
+        [HttpGet]
         public ActionResult OrderlistInsert()
+        {
+            Models.Orderlist orderlist = new Models.Orderlist();
+
+            return View(orderlist);
+        }
+        [HttpPost]
+        public ActionResult OrderlistInsert(Models.Orderlist orderlist)
         {
             
             return View();
         }
-        
+
     }
 }
