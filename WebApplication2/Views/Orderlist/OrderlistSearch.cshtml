@@ -6,16 +6,13 @@
 <h2>查詢結果</h2>
 <table>
     <tr>
-        <td>訂單編號</td><td>公司名稱</td><td>訂購日期</td>
+        <td>訂單編號</td><td>訂購日期</td>
     </tr>
     @foreach (var item in ViewBag.orderlist)
     {
     <tr>
         <td>
             @item.OrderId
-        </td>
-        <td>
-            @item.ContactName
         </td>
         <td>
             @item.OrderDate
