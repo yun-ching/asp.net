@@ -105,13 +105,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\OrderlistController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Dao\DaoConnect.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Orderlist.cs" />
-    <Compile Include="Models\OrderlistSearchArg.cs" />
-    <Compile Include="Models\OrderlistService.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\OrderSearchArg.cs" />
+    <Compile Include="Models\Services\OrderService.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Shipper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -122,9 +128,9 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Orderlist\Index.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Orderlist\OrderlistSearch.cshtml" />
+    <Content Include="Views\Order\OrderSearch.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

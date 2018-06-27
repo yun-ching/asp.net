@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace WebApplication2.Controllers
 {
-    public class OrderlistController : Controller
+    public class OrderController : Controller
     {
         // GET: Orderlist
         public ActionResult Index()
@@ -16,8 +16,8 @@ namespace WebApplication2.Controllers
         
         public ActionResult OrderlistSearch()
         {
-            Models.OrderlistService orderlistService = new Models.OrderlistService();
-            var orderlist = orderlistService.GetOrderlistByCondition(new Models.OrderlistSearchArg()
+            Models.OrderService orderlistService = new Models.OrderService();
+            var orderlist = orderlistService.GetOrderlistByCondition(new Models.OrderSearchArg()
             {
 
             });
