@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication2.Models;
+using WebApplication2.Models.Services;
 
 namespace WebApplication2.Controllers
 {
@@ -11,25 +14,25 @@ namespace WebApplication2.Controllers
         // GET: Orderlist
         public ActionResult Index()
         {
+            
             return View();
         }
-        
-        public ActionResult OrderlistSearch()
+
+        public ActionResult SearchOrder()
         {
-            Models.OrderService orderlistService = new Models.OrderService();
-            var orderlist = orderlistService.GetOrderlistByCondition(new Models.OrderSearchArg()
-            {
+            OrderService orderService = new OrderService();
+            List<Order> orderList = orderService.getAll();
 
-            });
-
-            ViewBag.orderlist = orderlist;
-
-           
+            ViewBag.orderAllList = orderList;
             return View();
         }
-        
 
-        
+        public ActionResult InsertOrder()
+        {
+            
+            return View();
+        }
+
 
     }
 }

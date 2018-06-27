@@ -1,55 +1,15 @@
-﻿@model WebApplication2.Models.Order
-
+﻿
 @{
-    ViewBag.Title = "訂單查詢";
+    
+    ViewBag.Title = "訂單首頁";
 }
 
-<h2>訂單查詢</h2>
+<h2>訂單首頁</h2>
 
 
-
-
-@*<table>
-        <tr>
-            <td>訂單編號</td>
-            <td><input type="text" id="OrderId" /></td>
-        </tr>
-        <tr>
-            <td>客戶名稱</td>
-            <td><input type="text" id="ContactName" /></td>
-        </tr>
-        <tr>
-            <td>負責員工</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>出貨公司</td><td></td>
-        </tr>
-        <tr>
-            <td>訂購日期</td>
-            <td><input type="date" id="OrderDate" /></td>
-            <td>出貨日期</td>
-            <td><input type="date" id="ShippedDate" /></td>
-        </tr>
-        <tr>
-            <td>需要日期</td>
-            <td><input type="date" id="RequiredDate" /></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>@Html.ActionLink("查詢", "OrderlistSearch")</td>
-            <td>@Html.ActionLink("新增", "OrderlistInsert")</td>
-        </tr>
-    </table>*@
-
-@*<script type="text/javascript">
-
-        $("#searchText").click(function (e) {
-            e.preventDefault();
-
-            alert('aaa');
-        });
-
-    </script>*@
+    @Html.ActionLink("查詢", "SearchOrder", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("新增", "InsertOrder", null, new { @class = "btn btn-info" })
+    <input type="button" value="修改" id="updateOrder" class="btn btn-info" />
+    <input type="button" value="刪除" id="deleteOrder" class="btn btn-info" />
 
 

@@ -11,16 +11,16 @@ namespace WebApplication2.Models
     public class Order
     {
         
-        public int OrderId { get; set; } //訂購編號
+        public int OrderID { get; set; } //訂購編號
 
         [DisplayName("顧客編號")]
-        public String CustomerId { get; set; } //顧客編號
+        public int CustomerID { get; set; } //顧客編號
 
         [DisplayName("員工編號")]
-        public String EmployeeId { get; set; } //員工編號
+        public int EmployeeID { get; set; } //員工編號
 
         [DisplayName("出貨編號")]
-        public String ShipperID { get; set; } //出貨編號
+        public int ShipperID { get; set; } //出貨編號
 
         [DisplayName("訂購日期")]
         public DateTime? OrderDate { get; set; } //訂購日期

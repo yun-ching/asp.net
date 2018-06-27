@@ -1,0 +1,40 @@
+﻿@model WebApplication2.Models.Order
+@{
+        ViewBag.Title = "查詢結果";
+    IList<WebApplication2.Models.Order> orders = ViewBag.orderAllList;
+}
+
+@{
+    ViewBag.Title = "SearchOrder";
+}
+
+<h2>查詢結果</h2>
+
+
+
+    <table>
+        <tr>
+            <td></td>
+            <td>訂單編號</td>
+            <td>客戶編號</td>
+            <td>員工編號</td>
+            <td>訂單日期</td>
+            <td>出貨日期</td>
+        </tr>
+
+        @foreach (var row in ViewBag.orderAllList)
+        {
+        <tr>
+            <td></td>
+            <td>@row.OrderID</td>
+            <td>@row.CustomerID</td>
+            <td>@row.EmployeeID</td>
+            <td>@row.OrderDate</td>
+            <td>@row.ShippedDate</td>
+        </tr>
+        }
+        <tr><td></td></tr>
+    </table>
+
+
+
