@@ -21,7 +21,7 @@ namespace WebApplication2.Models.Services
             DataSet dataSet = new DataSet();
             adapter.Fill(dataSet, "Customer");
 
-            List<Customer> employee = new List<Customer>();
+            List<Customer> customer = new List<Customer>();
             customer = dataSet.Tables[0].AsEnumerable().Select(
                 dataRow => new Customer()
                 {
@@ -31,15 +31,15 @@ namespace WebApplication2.Models.Services
             return customer;
         }
 
-        public Order getData(int OrderID)
+        public Customer getData(int CustomerID)
         {
             DaoConnect daoConnect = new DaoConnect();
             SqlConnection conn = daoConnect.SqlConnect();
-            List<Order> orderList = new List<Order>();
-            orderList = this.getAll();
-            Order orderData = orderList.Single(m => m.OrderID == OrderID);
+            List<Customer> customer = new List<Customer>();
+            customer = this.getAll();
+            Customer customerData = customer.Single(m => m.CustomerID == CustomerID);
 
-            return orderData;
+            return customerData;
         }
     }
 }
