@@ -71,5 +71,43 @@ namespace WebApplication2.Models.Services
 
             return orderData;
         }
+
+
+
+
+
+
+
+
+        public void Insert(Order ins)
+        {
+            DaoConnect daoConnect = new DaoConnect();
+            SqlConnection conn = daoConnect.SqlConnect();
+
+            string sql = @"INSERT INTO [Sales].[Orders]
+                            ([CustomerID],[EmployeeID],[ShipperID],[OrderDate],[ShippedDate],[RequiredDate],[ShipCountry],[ShipCity],[ShipRegion],[ShipPostalCode],[ShipAddress],[Freight])
+                           VALUE
+                            (@CustomerID,@EmployeeID,@ShipperID,@OrderDate,@ShippedDate,@RequiredDate,@ShipCountry,@ShipCity,@ShipRegion,@ShipPostalCode,@ShipAddress,@Freight)  SELECT SCOPE_IDENTITY()";
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.Add(new SqlParameter("@CustomerID", ins.CustomerID));
+            cmd.Parameters.Add(new SqlParameter("@EmployeeID", ins.EmployeeID));
+            cmd.Parameters.Add(new SqlParameter("@ShipperID", ins.ShipperID));
+            cmd.Parameters.Add(new SqlParameter("@OrderDate", ins.OrderDate));
+            cmd.Parameters.Add(new SqlParameter("@ShippedDate", ins.ShippedDate));
+            cmd.Parameters.Add(new SqlParameter("@RequiredDate", ins.RequiredDate));
+            cmd.Parameters.Add(new SqlParameter("@ShipName", ""));
+            cmd.Parameters.Add(new SqlParameter("@ShipCountry", ins.ShipCountry));
+            cmd.Parameters.Add(new SqlParameter("@ShipCity", ins.ShipCity));
+            cmd.Parameters.Add(new SqlParameter("@ShipRegion", ins.ShipRegion));
+            cmd.Parameters.Add(new SqlParameter("@ShipPostalCode", ins.ShipPostalCode));
+            cmd.Parameters.Add(new SqlParameter("@ShipAddress", ins.ShipAddress));
+            cmd.Parameters.Add(new SqlParameter("@Freight", ins.Freight));
+
+            conn.Open();
+            int orderId = Convert.ToInt32(cmd.ExecuteScalar());
+            conn.Close();
+        }
+
     }
 }

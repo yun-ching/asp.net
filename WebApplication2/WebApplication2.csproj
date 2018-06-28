@@ -116,7 +116,11 @@
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\OrderSearchArg.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Services\CustomerService.cs" />
+    <Compile Include="Models\Services\EmployeeService.cs" />
     <Compile Include="Models\Services\OrderService.cs" />
+    <Compile Include="Models\Services\ProductService.cs" />
+    <Compile Include="Models\Services\ShipperService.cs" />
     <Compile Include="Models\Shipper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -131,6 +135,7 @@
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Order\SearchOrder.cshtml" />
+    <Content Include="Views\Order\InsertOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
